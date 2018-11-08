@@ -26,4 +26,5 @@ class BlogServiceImp(private val blogRepository: BlogRepository) : BlogService {
   override fun searchByTitleOrContent(title: String, content: String) =
       blogRepository.findByTitleIgnoreCaseContainingOrContentIgnoreCaseContaining(title,  content)
 
+  override fun deleteAll() = blogRepository.deleteAll()
 }

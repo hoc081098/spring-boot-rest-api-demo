@@ -22,4 +22,6 @@ interface BlogService {
   fun delete(id: Long)
 
   fun searchByTitleOrContent(title: String, content: String): List<BlogEntity>
+
+  fun deleteAll()
 }

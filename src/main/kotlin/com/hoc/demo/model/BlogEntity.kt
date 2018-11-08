@@ -5,9 +5,9 @@ import javax.persistence.*
 @Table(name = "blog")
 @Entity
 data class BlogEntity(
+    val title: String,
+    val content: String,
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
-    val title: String,
-    val content: String
+    val id: Long = 0
 )
